@@ -1,5 +1,8 @@
 package wzu.edu.practice.vo;
 
+import lombok.Data;
+
+@Data
 public class TablePage<T>{
 
 	private int code;
@@ -7,35 +10,14 @@ public class TablePage<T>{
 	int count;
 	private T data;
 	
+	public final static int SUCCESS = 200;
+	public final static int FAILE = 505 ;
+	
 	public TablePage(int code,String msg,int count,T data){
 		this.code=code;
 		this.msg=msg;
 		this.count=count;
 		this.data=data;
 	}
-	public int getCode() {
-		return code;
-	}
-	public void setCode(int code) {
-		this.code = code;
-	}
-	public String getMsg() {
-		return msg;
-	}
-	public void setMsg(String msg) {
-		this.msg = msg;
-	}
-	public int getCount() {
-		return count;
-	}
-	public void setCount(int count) {
-		this.count = count;
-	}
-	public T getData() {
-		return data;
-	}
-	public void setData(T data) {
-		this.data = data;
-	}
-	
+
 }
